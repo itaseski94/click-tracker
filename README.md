@@ -1,5 +1,7 @@
 # click-tracker
 
+I have implemented this project with my newly acquired skills in App Engine, and it uses technologies like Cloud Endpoints, Objectify, DataStore
+
 endpoints-skeleton
 ==================
 
@@ -14,6 +16,7 @@ A skeleton application for Google Cloud Endpoints in Java.
 ## APIs
 - [Google Cloud Endpoints][3]
 - [Google App Engine Maven plugin][4]
+- [Objectify][5]
 
 ## Setup Instructions
 
@@ -21,18 +24,8 @@ A skeleton application for Google Cloud Endpoints in Java.
    ID you have registered in the App Engine admin console and would
    like to use to host your instance of this sample.
 
-1. Add your API method to `src/main/java/${packageInPathFormat}/YourFirstAPI.java`.
+1. Add the API method to `src/main/java/${packageInPathFormat}/TrackingAPI.java`.
 
-1. Optional step: These sub steps are not required but you need this
-   if you want to have auth protected methods.
-
-    1. Update the values in `src/main/java/${packageInPathFormat}/Constants.java`
-       to reflect the respective client IDs you have registered in the
-       [APIs Console][6]. 
-
-    1. You also need to supply the web client ID you have registered
-       in the [APIs Console][4] to your client of choice (web, Android,
-       iOS).
 
 1. Run the application with `mvn appengine:devserver`, and ensure it's
    running by visiting your local server's api explorer's address (by
@@ -50,6 +43,10 @@ A skeleton application for Google Cloud Endpoints in Java.
 1. Deploy your application to Google App Engine with
 
    $ mvn appengine:update
+
+My backend is already deployed on the Google App Engine and here is the URL for the API EXPLORER which you can use to test it https://apis-explorer.appspot.com/apis-explorer/?base=https://arch-1333.appspot.com/_ah/api#p/
+
+All the dependecies are included in the pom.xml. You can build it and deploy it like any other App Engine Maven project
 
 [1]: https://developers.google.com/appengine
 [2]: http://java.com/en/
