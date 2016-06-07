@@ -106,6 +106,9 @@ public class TrackingAPI {
         campaign.setUpdateDate(formattedDate);
         for (String str: form.getPlatforms()) {
             if (!campaign.getPlatforms().contains(str)) {
+                Key<Platform> pk = factory().allocateId(key, Platform.class);
+                Platform p = new Platform(pk.getId(), str, key.getId());
+                ofy().save().entity(p).now();
                 campaign.getPlatforms().add(str);
             }
         }
