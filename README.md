@@ -41,7 +41,7 @@ The only assumption I have made is that the backend should not redirect users di
 
 My backend is already deployed on the Google App Engine and here is the URL for the API EXPLORER which you can use to test it https://apis-explorer.appspot.com/apis-explorer/?base=https://arch-1333.appspot.com/_ah/api#p/
 
-All the dependecies are included in the pom.xml. You can build it and deploy it like any other App Engine Maven project
+All the dependencies are included in the pom.xml. You can build it and deploy it like any other App Engine Maven project
 
 [1]: https://developers.google.com/appengine
 [2]: http://java.com/en/
