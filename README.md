@@ -19,8 +19,6 @@ I have implemented this project with my newly acquired skills in App Engine, and
    ID you have registered in the App Engine admin console and would
    like to use to host your instance of this sample.
 
-1. Add the API method to `src/main/java/${packageInPathFormat}/TrackingAPI.java`.
-
 
 1. Run the application with `mvn appengine:devserver`, and ensure it's
    running by visiting your local server's api explorer's address (by
