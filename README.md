@@ -1,6 +1,6 @@
 # click-tracker
 
-I have implemented this project with my newly acquired skills in App Engine, and it uses technologies like Cloud Endpoints, Objectify, DataStore etc.. for any additional informations please contact me at ivica.taseski94@gmail.com.
+I have implemented this project with my newly acquired skills in App Engine for the purpose of this project and my own pleasure, and it uses technologies like Cloud Endpoints, Objectify, DataStore etc.. for any additional informations please contact me at ivica.taseski94@gmail.com.
 
 ## Products
 - [App Engine][1]
