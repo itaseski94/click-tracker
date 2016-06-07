@@ -186,6 +186,9 @@ public class TrackingAPI {
         }
 
         List<Platform> list = ofy().load().type(Platform.class).filter("name =", platform).list();
+        if (list.isEmpty()) {
+            throw new NotFoundException("Platform not found");
+        }
         long sum = 0;
         for (Platform p : list) {
             sum += p.getKlicks();
