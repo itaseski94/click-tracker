@@ -126,7 +126,7 @@ public class TrackingAPI {
         }
 
         Iterable<Key<Platform>> allKeys = ofy().load().type(Platform.class).ancestor(key).keys();
-        ofy().delete().keys(allKeys);
+        ofy().delete().keys(allKeys).now();
         ofy().delete().key(key).now();
     }
 
