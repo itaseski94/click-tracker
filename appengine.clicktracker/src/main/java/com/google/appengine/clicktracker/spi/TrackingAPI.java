@@ -38,7 +38,6 @@ import java.util.*;
 public class TrackingAPI {
 
     @ApiMethod(name = "handleRequest", path = "client/campaign", httpMethod = HttpMethod.GET)
-
     public Redirect handleRequest(@Named("id") long id, @Named("platform") String platform) {
         Key key  =  Key.create(Campaign.class, id);
         Campaign campaign = (Campaign) ofy().load().key(key).now();
@@ -57,7 +56,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "createCampaign", path = "admin/campaigns", httpMethod = HttpMethod.POST)
-
     public Campaign createCampaign(final User user, CampaignForm form) throws UnauthorizedException,
                                    BadRequestException {
         if (user == null) {
@@ -84,7 +82,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "updateCampaign", path = "admin/campaigns/{id}", httpMethod = HttpMethod.PUT)
-
     public void updateCampaign(final User user, @Named("id") long id,
                                CampaignForm form) throws UnauthorizedException, NotFoundException, BadRequestException{
         if (user == null) {
@@ -116,7 +113,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "deleteCampaign", path = "admin/campaigns/{id}", httpMethod = HttpMethod.DELETE)
-
     public void deleteCampaign(final User user, @Named("id") long id) throws UnauthorizedException,
                                NotFoundException {
         if (user == null) {
@@ -135,7 +131,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "getCampaign", path = "admin/campaigns", httpMethod = HttpMethod.GET)
-
     public Campaign getCampaign(final User user, @Named("id") long id) throws UnauthorizedException,
                                 NotFoundException {
         if (user == null) {
@@ -152,7 +147,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "listPlatformCampaigns", path = "admin/campaigns/platform", httpMethod = HttpMethod.GET)
-
     public List<Campaign> listPlatformCampaigns(final User user, @Named("platform") String platform) throws UnauthorizedException {
         if (user == null) {
             throw new UnauthorizedException(" ");
@@ -164,7 +158,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "getCampaignClicks", path = "admin/campaign/platform/clicks", httpMethod = HttpMethod.GET)
-
     public Clicks getCampaignClicks(final User user, @Named("id") long id, @Named("platform") String platform) throws
                                     UnauthorizedException, NotFoundException {
         Key key  =  Key.create(Campaign.class, id);
@@ -182,7 +175,6 @@ public class TrackingAPI {
     }
 
     @ApiMethod(name = "getPlatformClicks", path = "admin/campaigns/platform/clicks")
-
     public Clicks getPlatformClicks(final User user, @Named("platform") String platform) throws UnauthorizedException, NotFoundException {
         if (user == null) {
             throw new UnauthorizedException("Authorization required");
