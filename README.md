@@ -1,9 +1,5 @@
 # click-tracker
 
-I have implemented this project with my newly acquired skills in App Engine and it uses technologies like Cloud Endpoints, Objectify, DataStore etc.. for any additional informations please contact me at ivica.taseski94@gmail.com.
-
-The only assumption I have made is that the backend should not redirect users directly but send JSON answer with all the redirection informations embedded in it, since by definition RESTful API's should not send back HTML files or redirect users.
-
 ## Products
 - [App Engine][1]
 
@@ -38,10 +34,6 @@ The only assumption I have made is that the backend should not redirect users di
 1. Deploy your application to Google App Engine with
 
    $ mvn appengine:update
-
-My backend is already deployed on the Google App Engine and here is the URL for the API EXPLORER which you can use to test it https://apis-explorer.appspot.com/apis-explorer/?base=https://arch-1333.appspot.com/_ah/api#p/
-
-All the dependencies are included in the pom.xml. You can build it and deploy it like any other App Engine Maven project
 
 [1]: https://developers.google.com/appengine
 [2]: http://java.com/en/
